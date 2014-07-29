@@ -58,7 +58,7 @@ public class CoreActivity extends Activity implements OnClickListener{
 			ChangeFragmentContainer(frag);
 		}		
 		
-		//LAAAAAAAAAAAAAAAAAAAAAAAAAAA
+		//LAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaa
 	}
 
 	@Override
