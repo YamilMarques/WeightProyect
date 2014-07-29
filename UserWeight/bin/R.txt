@@ -91,7 +91,6 @@ int layout fragment_listh 0x7f030003
 int layout fragment_mod_hr 0x7f030004
 int layout fragment_nhr 0x7f030005
 int layout layout_bg 0x7f030006
-int layout listview_itemh 0x7f030007
 int menu core 0x7f080000
 int menu setup 0x7f080001
 int string Addweight 0x7f06000c
