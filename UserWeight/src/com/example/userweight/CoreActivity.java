@@ -57,6 +57,8 @@ public class CoreActivity extends Activity implements OnClickListener{
 			NewHistorialRow_fragment frag = new NewHistorialRow_fragment();
 			ChangeFragmentContainer(frag);
 		}		
+		
+		//LAAAAAAAAAAAAAAAAAAAAAAAAAAA
 	}
 
 	@Override
