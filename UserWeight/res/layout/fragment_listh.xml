@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.example.userweight">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@layout/layout_bg"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:id="@+id/tv_date2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/History"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@layout/layout_bg"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_typewieght_mod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Date"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/holo_blue_light"
+                android:typeface="monospace" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_korp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TypeWeight"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/holo_green_light"
+                android:typeface="monospace" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+     <com.fortysevendeg.swipelistview.SwipeListView
+         android:id="@+id/lv_history1"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginBottom="5dp"
+         android:layout_marginTop="5dp"
+         android:background="@layout/layout_bg"
+         android:listSelector="#00000000"
+         app:swipeBackView="@+id/back"
+         app:swipeCloseAllItemsWhenMoveList="true"
+         app:swipeDrawableChecked="@drawable/choice_selected"
+         app:swipeDrawableUnchecked="@drawable/choice_unselected"
+         app:swipeFrontView="@+id/front"
+         app:swipeMode="both" />
+
+</LinearLayout>

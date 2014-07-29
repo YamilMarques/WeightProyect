@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UserWeight</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="More">More</string>
+    <string name="WType">Weight Type</string>
+    <string name="Pounds">Pounds</string>
+    <string name="Kilograms">Kilograms</string>
+    <string name="GoOn">Go On!</string>
+    <string name="title_activity_core">CoreActivity</string>
+    <string name="VoidUser">Void User</string>
+    <string name="NewWeight">New Weight</string>
+    <string name="Grams">Grams</string>
+    <string name="Addweight">Add Weight</string>
+    <string name="Delete">Delete</string>
+    <string name="History">History</string>
+    <string name="User">User:</string>
+    <string name="Date">Date</string>
+    <string name="Userconfig">User Configuration</string>
+    <string name="Modify">Modify</string>
+
+</resources>

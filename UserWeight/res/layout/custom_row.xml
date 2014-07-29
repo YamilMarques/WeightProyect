@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+ 
+        <LinearLayout
+            android:id="@+id/back"
+            style="@style/MyListBackContent"
+            android:gravity="left"
+            android:tag="back" >
+
+            <ImageButton
+                android:id="@+id/img_btn1"
+                style="@style/MyListButtonAction"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_mail" />
+
+            <ImageButton
+                android:id="@+id/img_btn2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_action_edit" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right" >
+
+                <ImageButton
+                    android:id="@+id/img_btn3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_action_mail_add" />
+
+            </LinearLayout>
+ 
+    </LinearLayout>
+
+     <RelativeLayout
+         android:id="@+id/front"
+         style="@style/MyListFrontContent"
+         android:orientation="vertical"
+         android:tag="front" >
+
+         <TextView
+             android:id="@+id/tv_date2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/tv_weight2"
+             android:layout_alignBottom="@+id/tv_weight2"
+             android:layout_alignParentLeft="true"
+             android:layout_marginLeft="42dp"
+             android:layout_weight="1"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textColor="@android:color/holo_orange_dark"
+             android:textColorLink="@android:color/holo_blue_light"
+             android:textSize="15sp"
+             android:typeface="monospace" />
+
+         <TextView
+             android:id="@+id/tv_weight2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true"
+             android:layout_marginRight="60dp"
+             android:layout_marginTop="14dp"
+             android:layout_weight="1"
+             android:textAppearance="?android:attr/textAppearanceMedium"
+             android:textSize="15sp"
+             android:typeface="monospace" />
+
+     </RelativeLayout>
+ 
+</FrameLayout>
