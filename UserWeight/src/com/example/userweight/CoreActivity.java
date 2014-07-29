@@ -96,7 +96,7 @@ public class CoreActivity extends Activity implements OnClickListener{
 					}
 		}else
 			Toast.makeText(this, "Add new user first!" ,Toast.LENGTH_LONG).show();
-		
+	
 	}
 	
 	public void ChangeFragmentContainer(Fragment frag){

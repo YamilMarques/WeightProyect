@@ -52,6 +52,18 @@ public class Config_fragment extends Fragment implements OnClickListener{
 	     b_goon = (Button)view.findViewById(R.id.b_goon);
 	     b_goon.setOnClickListener(this);
 	     b_more.setOnClickListener(this);
+	     
+	     if(UserContainer.GiveMeUser() != null){  //If user exist!
+	    	 User us = UserContainer.GiveMeUser();
+	    	 et_name.setHint(us.getName());
+	    	 et_email.setHint(us.getMail());
+	    	 et_contactemail.setHint(us.getContactEmail());
+	    	 b_goon.setText("Modify User");
+	    	 if(us.getWeightType() == 0) 
+	    		 rg_weighttype.check(R.id.radio0);
+	    	 else
+	    		 rg_weighttype.check(R.id.radio1);
+	     }
 		
 	     return view;
 	}
