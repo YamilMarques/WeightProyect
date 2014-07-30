@@ -85,9 +85,9 @@ public class ItemAdapter extends ArrayAdapter {
 				HistorialRow h_row = list_h.get(pos);
 
 				if (UserContainer.GiveMeUser().getWeightType() == 0)
-					text = "Date: " + h_row.getDate() + " // Weight: "+ String.valueOf(h_row.getWeight() / 1000)+"kg";
+					text = "Date: " + h_row.getDate() + " | Weight: "+ String.valueOf(h_row.getWeight() / 1000)+"kg";
 				else
-					text = "Date: " + h_row.getDate() + " // Weight: "+ String.valueOf(h_row.getWeight())+"lbs";
+					text = "Date: " + h_row.getDate() + " | Weight: "+ String.valueOf(h_row.getWeight())+"lbs";
 				
 				String email_destiny = UserContainer.GiveMeUser().getContactEmail();		
 				SendEmail(text, email_destiny);
@@ -102,7 +102,7 @@ public class ItemAdapter extends ArrayAdapter {
 				Bundle bun = new Bundle();
 				bun.putInt("idrow", list_h.get(pos).getId());
 				bun.putString("date_old", list_h.get(pos).getDate());
-				bun.putInt("weight_old", list_h.get(pos).getWeight());
+				bun.putDouble("weight_old", list_h.get(pos).getWeight());
 				frag.setArguments(bun);
 				((CoreActivity) activitycore).ChangeFragmentContainer(frag);
 			}

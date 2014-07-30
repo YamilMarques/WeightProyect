@@ -91,7 +91,7 @@ public class ListHistorial_fragment extends Fragment{
 	         public void onClickFrontView(int position) {
 	             Log.d("swipe", String.format("onClickFrontView %d", position));
 	 
-	             //swipelistview.openAnimate(position); //when you touch front view it will open
+	             //lv_history.openAnimate(position); //when you touch front view it will open
 	 
 	         }
 	 
@@ -99,7 +99,7 @@ public class ListHistorial_fragment extends Fragment{
 	         public void onClickBackView(int position) {
 	             Log.d("swipe", String.format("onClickBackView %d", position));
 	 
-	             //swipelistview.closeAnimate(position);//when you touch back view it will close
+	             lv_history.closeAnimate(position);//when you touch back view it will close
 	         }
 	 
 	         @Override

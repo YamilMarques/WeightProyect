@@ -202,6 +202,7 @@ containing a value of this type.
         public static final int fragment_mod_hr=0x7f030004;
         public static final int fragment_nhr=0x7f030005;
         public static final int layout_bg=0x7f030006;
+        public static final int layout_button_bg=0x7f030007;
     }
     public static final class menu {
         public static final int core=0x7f080000;

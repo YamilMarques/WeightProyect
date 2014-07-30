@@ -58,10 +58,10 @@ public class ModifyHRow_fragment extends Fragment implements View.OnClickListene
 		b_modify.setOnClickListener(this);
 		
 		Bundle bun = getArguments();
-		h_r = new HistorialRow(bun.getInt("idrow"), bun.getString("date_old"), bun.getInt("weight_old"));
+		h_r = new HistorialRow(bun.getInt("idrow"), bun.getString("date_old"), bun.getDouble("weight_old"));
 		if(bun != null && bun.containsKey("date_old") && bun.containsKey("weight_old")){
 			String date_old = bun.getString("date_old");
-			int weight_old = bun.getInt("weight_old");
+			double weight_old = bun.getDouble("weight_old");
 			tv_dateold.setText(date_old);
 			if (flag == 0)  //0:KILOGRAMS 1:POUNDS
 				tv_weightold.setText(String.valueOf(weight_old/1000)+"kg");  
@@ -75,9 +75,9 @@ public class ModifyHRow_fragment extends Fragment implements View.OnClickListene
 			tv_typewightmod.setText("Pounds");
 		
 		if(flag == 0)
-			et_weight_mod.setHint(String.valueOf(bun.getInt("weight_old")/1000));
+			et_weight_mod.setHint(String.valueOf(bun.getDouble("weight_old")/1000));
 		else
-			et_weight_mod.setHint(String.valueOf(bun.getInt("weight_old")));
+			et_weight_mod.setHint(String.valueOf(bun.getDouble("weight_old")));
 		
 		String dateold = bun.getString("date_old");
 		int year = Integer.valueOf(dateold.substring(0, 4)); //year

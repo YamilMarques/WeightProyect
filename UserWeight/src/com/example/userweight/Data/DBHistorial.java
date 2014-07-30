@@ -23,7 +23,7 @@ public class DBHistorial {
 		String query = "create table "+TABLE_NAME+"("+
 								CN_ID+" integer primary key not null,"+
 								CN_DATE+" date not null,"+
-								CN_WEIGHT+" integer not null);";
+								CN_WEIGHT+" real not null);";
 		return query;
 	}
 	
@@ -46,14 +46,14 @@ public class DBHistorial {
 			db.close();
 	}
 	
-	private ContentValues Contenedorvalores(String date,int weight){
+	private ContentValues Contenedorvalores(String date,double weight){
 		ContentValues cont = new ContentValues();
 		cont.put(CN_DATE, date);
 		cont.put(CN_WEIGHT, weight);
 		return cont;
 	}
 	
-	public void insertar(String date,int weight){   //date entra como un string debe ser: "Año-Mes-Dia" ---> "1992-27-12"
+	public void insertar(String date,double weight){   //date entra como un string debe ser: "Año-Mes-Dia" ---> "1992-27-12"
 		db.insert(TABLE_NAME, null, Contenedorvalores(date, weight));
 	}
 	
@@ -78,7 +78,7 @@ public class DBHistorial {
 	}
 	
 	public List<HistorialRow> ListaHistorial(){
-		Cursor c = db.query(TABLE_NAME, columns, null, null, null, null, null);
+		Cursor c = db.query(TABLE_NAME, columns, null, null, null, null, CN_DATE+" ASC");  //Ascendet mod!
 		return CrearLista(c);
 	}
 	

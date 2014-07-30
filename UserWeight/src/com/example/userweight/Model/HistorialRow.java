@@ -2,10 +2,11 @@ package com.example.userweight.Model;
 
 public class HistorialRow {
 
-	private int Id,Weight;
+	private int Id;
+	private double Weight;
 	private String Date;
 
-	public HistorialRow(int id,String date,int weight){
+	public HistorialRow(int id,String date,double weight){
 		Id = id;
 		Date = date;
 		Weight = weight;
@@ -20,11 +21,11 @@ public class HistorialRow {
 		Id = id;
 	}
 
-	public int getWeight() {
+	public double getWeight() {
 		return Weight;
 	}
 
-	public void setWeight(int weight) {
+	public void setWeight(double weight) {
 		Weight = weight;
 	}
 

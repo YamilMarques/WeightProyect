@@ -1,6 +1,8 @@
 package com.example.userweight.Fragments;
 
 import java.sql.Date;
+import java.text.DecimalFormat;
+import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -13,6 +15,7 @@ import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
+import android.text.format.Formatter;
 import android.view.LayoutInflater;
 import android.view.TextureView;
 import android.view.View;
@@ -30,6 +33,8 @@ public class NewHistorialRow_fragment extends Fragment implements View.OnClickLi
 	private TextView tv_typew;
 	private Button b_addw;
 	private int flag;
+	
+	private Formatter format;
 	
 	private int year,month,day;
 	private Calendar calendar_now;
@@ -74,7 +79,7 @@ public class NewHistorialRow_fragment extends Fragment implements View.OnClickLi
 				Toast.makeText(getActivity(), "Date would be higher!" ,Toast.LENGTH_LONG).show();
 			else//date is right!
 				if(	et_k_p.getText().toString().length() > 0 ){
-					int weight = Integer.valueOf(et_k_p.getText().toString());
+					Double weight = Double.valueOf(et_k_p.getText().toString());
 					DBHistorial dbh = new DBHistorial(getActivity());
 					dbh.ModoEscritura();
 					if(flag == 0)  //change kilograms to grams!
@@ -93,6 +98,5 @@ public class NewHistorialRow_fragment extends Fragment implements View.OnClickLi
 		
 	}
 	
-
 
 }
