@@ -20,5 +20,8 @@
     <string name="Date">Date</string>
     <string name="Userconfig">User Configuration</string>
     <string name="Modify">Modify</string>
+    <string name="Fromdate">From Date</string>
+    <string name="Todate">To Date</string>
+    <string name="Send">Send</string>
 
 </resources>

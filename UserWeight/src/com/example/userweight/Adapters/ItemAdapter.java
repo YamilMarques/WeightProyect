@@ -5,6 +5,7 @@ import java.util.List;
 import com.example.userweight.CoreActivity;
 import com.example.userweight.R;
 import com.example.userweight.Data.DBHistorial;
+import com.example.userweight.Fragments.DateToDate_FragDialog;
 import com.example.userweight.Fragments.ListHistorial_fragment;
 import com.example.userweight.Fragments.ModifyHRow_fragment;
 import com.example.userweight.Model.HistorialRow;
@@ -13,6 +14,7 @@ import com.example.userweight.Model.UserContainer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -111,17 +113,37 @@ public class ItemAdapter extends ArrayAdapter {
 		holder.button3.setOnClickListener(new View.OnClickListener() {
 
 			@Override
-			public void onClick(View v) { //SEND ALL
-				String text="";
-				int type = UserContainer.GiveMeUser().getWeightType();
-				for(int i=0;i<list_h.size();i++){
-					if(type == 0)
-						text = text+"\n Date: " + list_h.get(i).getDate() + "  |  Weight: "+ String.valueOf(list_h.get(i).getWeight() / 1000)+"kg";
-					else
-						text = text+"\n Date: " + list_h.get(i).getDate() + "  |  Weight: "+ String.valueOf(list_h.get(i).getWeight())+"lbs";
-				}
-				String email_destiny = UserContainer.GiveMeUser().getContactEmail();
-				SendEmail(text, email_destiny);
+			public void onClick(View v) { 
+				
+				CharSequence options[] = new CharSequence[]{"Cancel","Send Date to Date","Send all"};
+				AlertDialog.Builder builder = new AlertDialog.Builder(activitycore);
+				builder.setTitle("Send Historial");
+				builder.setItems(options, new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						if(which == 1){ //Send date to date
+							FragmentManager fm = activitycore.getFragmentManager();
+							DateToDate_FragDialog fdtd = new DateToDate_FragDialog();
+					        fdtd.setRetainInstance(true);
+					        fdtd.show(fm, "fdtd");
+						}else
+							if(which == 2){  //Send all
+								//SEND ALL
+								String text="";
+								int type = UserContainer.GiveMeUser().getWeightType();
+								for(int i=0;i<list_h.size();i++){
+									if(type == 0)
+										text = text+"\n Date: " + list_h.get(i).getDate() + "  |  Weight: "+ String.valueOf(list_h.get(i).getWeight() / 1000)+"kg";
+									else
+										text = text+"\n Date: " + list_h.get(i).getDate() + "  |  Weight: "+ String.valueOf(list_h.get(i).getWeight())+"lbs";
+								}
+								String email_destiny = UserContainer.GiveMeUser().getContactEmail();
+								SendEmail(text, email_destiny);
+							}					
+					}
+				});
+				builder.show();			
 			}
 		});
 

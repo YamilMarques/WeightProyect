@@ -9,6 +9,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+
 public class DBHistorial {
 
 	//Nombre de la Tabla
@@ -85,6 +86,13 @@ public class DBHistorial {
 	public void ModifyRow(HistorialRow h_r){
 		String query = "UPDATE "+TABLE_NAME+" SET "+CN_DATE+" = '"+h_r.getDate()+"', "+CN_WEIGHT+" = "+h_r.getWeight()+" WHERE "+CN_ID+" = "+h_r.getId();
 		db.execSQL(query);
+	}
+	
+	public List<HistorialRow> GiveMeFromToDate(String date_from,String date_to){
+		String query = "SELECT * FROM "+TABLE_NAME+" WHERE "+CN_DATE+" <= '"+date_from+"' AND "+CN_DATE+" >= '"+date_to+"'";
+		Cursor c = db.rawQuery(query, null);
+		
+		return CrearLista(c);
 	}
 	
 }
