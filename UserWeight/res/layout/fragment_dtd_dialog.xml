@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@layout/layout_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Fromdate"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <DatePicker
+            android:id="@+id/dp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:calendarViewShown="false"
+            android:scaleX="0.8"
+            android:scaleY="0.8" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Todate"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <DatePicker
+            android:id="@+id/dp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:calendarViewShown="false"
+            android:scaleX="0.8"
+            android:scaleY="0.8" />
+
+        <Button
+            android:id="@+id/b_send"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:background="@layout/layout_button_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/Send"
+            android:textColor="#FFFFFF"
+            android:typeface="sans" />
+
+    </LinearLayout>
+
+</LinearLayout>

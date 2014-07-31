@@ -264,6 +264,7 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int CustomTheme1=0x7f070007;
         public static final int MyListBackContent=0x7f070002;
         public static final int MyListButtonAction=0x7f070004;
         public static final int MyListFrontContent=0x7f070003;

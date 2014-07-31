@@ -123,6 +123,7 @@ int string hello_world 0x7f060001
 int string title_activity_core 0x7f060008
 int style AppBaseTheme 0x7f070000
 int style AppTheme 0x7f070001
+int style CustomTheme1 0x7f070007
 int style MyListBackContent 0x7f070002
 int style MyListButtonAction 0x7f070004
 int style MyListFrontContent 0x7f070003
